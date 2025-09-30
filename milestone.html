@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Milestone – Rolyo Films</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
+  section.milestone {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #8b1d1d; /* deep red banner */
+    padding: 40px;
+    position: relative;
+  }
+  .milestone-text {
+    flex: 1 1 300px;
+    margin-right: 30px;
+  }
+  .milestone-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  .milestone-text ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+  }
+  .milestone-text li::before {
+    content: "• ";
+    color: #fff;
+    font-weight: bold;
+  }
+  .milestone-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1 1 300px;
+    justify-content: center;
+  }
+  .milestone-images img {
+    width: 180px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+  }
+  /* optional filmstrip accent */
+  .filmstrip {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    opacity: 0.2;
+  }
+  @media (max-width: 768px) {
+    section.milestone { flex-direction: column; }
+    .milestone-text { margin-right: 0; margin-bottom: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="milestone">
+  <div class="milestone-text">
+    <h2>OUR MILESTONE</h2>
+    <ul>
+      <li><strong>2024</strong> – Rolyo Films founded, inspired by the golden age of cinema.</li>
+      <li><strong>Jan 2025</strong> – Released <em>Pilas, Lapis</em>, a docu-drama highlighting women’s courage against discrimination and abuse.</li>
+      <li><strong>Apr 2025</strong> – Produced <em>EverTrue</em>, a short film for the Lenten season.</li>
+      <li><strong>2025</strong> – Released a commercial project for brand promotion.</li>
+    </ul>
+  </div>
+
+  <div class="milestone-images">
+    <img src="pilas-lapis.jpg" alt="Poster of Pilas Lapis">
+    <img src="evertrue.jpg" alt="Poster of EverTrue">
+    <img src="sundayz.jpg" alt="Image from commercial project">
+  </div>
+
+  <!-- Optional decorative filmstrip -->
+  <img src="filmstrip.png" alt="" class="filmstrip">
+</section>
+
+</body>
+</html>

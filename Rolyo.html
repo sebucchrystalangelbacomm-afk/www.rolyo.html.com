@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rolyo Films Production</title>
+  <style>
+    /* ===== Base Site Styles (unchanged) ===== */
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      position: relative;
+      font-family: Arial, sans-serif;
+      background: url("ab056105-efa3-4a18-af4f-a388d46e6d22.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: -1;
+    }
+    header {
+      background: rgba(34, 34, 34, 0.8);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      color: #e74c3c;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      background: rgba(51, 51, 51, 0.9);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.2s;
+      cursor: pointer;
+      outline: none;
+    }
+    nav a:hover, nav a.active {
+      color: #e74c3c;
+      transform: scale(1.1);
+    }
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(28, 28, 28, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      display: none;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    section.active {display: block; opacity: 1;}
+    section h2 {
+      color: #e74c3c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    section p {font-size: 1.1rem;}
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(34, 34, 34, 0.9);
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    /* ===== Leadership Section Styles ===== */
+    .org-chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+    .level {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .card {
+      background: rgba(34,34,34,0.9);
+      border: 1px solid #fff;
+      padding: 15px 20px;
+      margin: 10px;
+      min-width: 180px;
+      text-align: center;
+      border-radius: 6px;
+      transition: transform .2s;
+    }
+    .card:hover {transform: scale(1.05);}
+    .name {font-weight: 600; margin-bottom: 6px;}
+    .title {font-size: 0.9rem; color: #ccc;}
+
+    /* ===== Milestone Section ===== */
+    .milestone-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .milestone-text {
+      flex: 1 1 300px;
+      line-height: 1.8;
+    }
+    .milestone-text ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .milestone-text li::before {
+      content: "• ";
+      color: #fff;
+      font-weight: bold;
+    }
+    .milestone-images {
+      flex: 1 1 300px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .milestone-images img {
+      width: 180px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Rolyo Films Production</h1>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a tabindex="0" onclick="showSection('home', this)">Home</a>
+    <a tabindex="0" onclick="showSection('introduction', this)">Introduction</a>
+    <a tabindex="0" onclick="showSection('mission', this)">Mission & Vision</a>
+    <a tabindex="0" onclick="showSection('corevalues', this)">Core Values</a>
+    <a tabindex="0" onclick="showSection('goal', this)">Goal</a>
+    <a tabindex="0" onclick="showSection('milestone', this)">Our Milestone</a> <!-- NEW LINK -->
+    <a tabindex="0" onclick="showSection('about', this)">About Us</a>
+    <a tabindex="0" onclick="showSection('leadership', this)">Leadership</a>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h2>Welcome to Rolyo Films</h2>
+    <p style="text-align: center;"></p>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>
+      The name “Rolyo” represents the connection between past and present —
+      the dedication to precision and quality that carried through from analog film
+      to digital innovation. Every project is approached with the same careful planning,
+      attention to detail, and passion that defined cinema’s golden age,
+      but powered by today’s cutting-edge tools.  
+      Founded in 2024, Rolyo Films was born with a deep respect for the history of filmmaking,
+      honoring craftsmanship and storytelling with heart while embracing modern technology.
+    </p>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align: center;">
+      Rolyo Films Production is a creative team dedicated to capturing powerful stories 
+      through photography and film. We believe in the art of storytelling, bringing 
+      emotions and memories to life with every project we produce.
+    </p>
+
+    <h2 style="margin-top: 40px;">Contact Us</h2>
+    <p style="text-align: center;">Email: rolyofilms@example.com</p>
+    <p style="text-align: center;">Phone: +63 912 345 6789</p>
+    <p style="text-align: center;">Follow us on social media for more updates!</p>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section id="mission">
+    <h2>Mission & Vision</h2>
+    <p><strong>Mission:</strong> To bring compelling stories to life with passion, creativity, and a commitment to excellence in every frame.</p>
+    <br>
+    <p><strong>Vision:</strong> To produce timeless films that inspire, engage, and reflect the richness of human experiences.</p>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section id="corevalues">
+    <h2>Core Values</h2>
+    <ul style="margin-top:15px; font-size:1.1rem; line-height:1.8;">
+      <li>Passion for Storytelling</li>
+      <li>Craftsmanship</li>
+      <li>Innovation + Tradition</li>
+      <li>Collaboration</li>
+      <li>Excellence</li>
+    </ul>
+  </section>
+
+  <!-- GOAL -->
+  <section id="goal">
+    <h2>Goal</h2>
+    <p>
+      Produce Award-Winning Films – Compete in local and international film festivals. <br><br>
+      Expand Distribution – Partner with streaming platforms and cinema chains nationwide. <br><br>
+      Talent Development – Launch workshops to train aspiring filmmakers and actors. <br><br>
+      Build a Studio Facility – Establish a state-of-the-art production hub for local talents. <br><br>
+      Promote Philippine Culture – Create films that highlight Filipino heritage and stories for global audiences.
+    </p>
+  </section>
+
+  <!-- OUR MILESTONE -->
+  <section id="milestone">
+    <h2>Our Milestone</h2>
+    <div class="milestone-content">
+      <div class="milestone-text">
+        <ul>
+          <li><strong>2024</strong> – Rolyo Films founded, inspired by the golden age of cinema.</li>
+          <li><strong>Jan 2025</strong> – Released <em>Pilas, Lapis</em>, a docu-drama highlighting women’s courage against discrimination and abuse.</li>
+          <li><strong>Apr 2025</strong> – Produced <em>EverTrue</em>, a short film for the Lenten season.</li>
+          <li><strong>2025</strong> – Released a commercial project for brand promotion.</li>
+        </ul>
+      </div>
+      <div class="milestone-images">
+        <img src="pilas-lapis.jpg" alt="Poster of Pilas Lapis">
+        <img src="evertrue.jpg" alt="Poster of EverTrue">
+        <img src="sundayz.jpg" alt="Image from commercial project">
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section id="leadership">
+    <h2>CORPORATE LEADERSHIP AND BOARD OF DIRECTORS OF ROLYO FILMS</h2>
+    <div class="org-chart">
+      <div class="level">
+        <div class="card">
+          <div class="name">Ronailene Grace Malate</div>
+          <div class="title">Chief Executive Officer</div>
+        </div>
+      </div>
+      <div class="level">
+        <div class="card"><div class="name">Princess Nichole Abella</div><div class="title">Chief Operating Officer</div></div>
+        <div class="card"><div class="name">Crystal Angel Sebuc</div><div class="title">Chief Financial Officer</div></div>
+        <div class="card"><div class="name">Joan Cari</div><div class="title">Chief Marketing Officer</div></div>
+        <div class="card"><div class="name">Verna Jacinto</div><div class="title">Chief Business Officer</div></div>
+        <div class="card"><div class="name">Genesis Malquiodas</div><div class="title">Chief Legal Officer</div></div>
+      </div>
+      <div class="level">
+        <div class="card"><div class="name">Jason Munard</div><div class="title">Member, Board of Directors</div></div>
+        <div class="card"><div class="name">Jasmine De Guzman</div><div class="title">Member, Board of Directors</div></div>
+        <div class="card"><div class="name">Mariela Villalobos</div><div class="title">Member, Board of Directors</div></div>
+        <div class="card"><div class="name">Maria Kaye Costales</div><div class="title">Member, Board of Directors</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Rolyo Films. All rights reserved.
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function showSection(id, linkElement) {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+      sections.forEach(section => section.classList.remove("active"));
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      const selectedSection = document.getElementById(id);
+      selectedSection.classList.add("active");
+      selectedSection.scrollIntoView({ behavior: "smooth" });
+
+      if (linkElement) linkElement.classList.add("active");
+    }
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") this.click();
+      });
+    });
+  </script>
+
+</body>
+</html>
